@@ -51,7 +51,7 @@ router.post('/StudentSignup',async (req,res)=>{
 
 
 
-app.get('/StudentDetail',(req,res)=>{
+router.get('/StudentDetail',(req,res)=>{
   
   StudentUser.find({RegId:"19A21A0534"},(err, docs) => {
       if (!err) {
@@ -62,6 +62,10 @@ app.get('/StudentDetail',(req,res)=>{
   });
 })
 
+
+router.get('/',(req,res)=>{
+    res.send({"Server":"Server Running....."})
+})
 router.post('/Periods',async (req,res)=>{
    
    
