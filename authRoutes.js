@@ -48,6 +48,20 @@ router.post('/StudentSignup',async (req,res)=>{
     
 })
 
+
+
+
+app.get('/StudentDetail',(req,res)=>{
+  
+  StudentUser.find({RegId:"19A21A0534"},(err, docs) => {
+      if (!err) {
+           res.send(docs);
+      } else {
+          console.log('Failed to retrieve the Course List: ' + err);
+      }
+  });
+})
+
 router.post('/Periods',async (req,res)=>{
    
    
