@@ -70,7 +70,7 @@ app.get("/GetStudentsData",(req,res)=>{
 app.post("/addStudentData",(req,res)=>{
 
     const tablename =req.query.table;
- 
+
     const {Name,RegId,Branch,Section,Batch,Year,Semester,Percentage,Phoneno,Address,AttendancePercentage,NoOfClasses,TotalClasses,Email,Backlogs,CollegeId,StudentImage} = req.body;
 
     const sqlinsert=
